@@ -6,6 +6,8 @@ The Python in this repo was developed using TDD and recorded for a video series 
 
 Nicholas's edits:
 
+![Demo](bill_evans_ner.gif)
+
 1. Create a new virtual environment and activate it. You could do run something like this in your terminal:
     ```
     python -m venv ./flask-ner
