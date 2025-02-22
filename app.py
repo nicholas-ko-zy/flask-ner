@@ -3,9 +3,10 @@ import json
 import spacy
 from spacy import displacy
 from ner_client import NamedEntityClient
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
 ner = spacy.load("en_core_web_sm")
 ner = NamedEntityClient(ner, displacy)
 

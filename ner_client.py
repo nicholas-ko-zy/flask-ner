@@ -16,7 +16,8 @@ class NamedEntityClient:
             'NORP'    : 'Group',
             'LOC'     : 'Location',
             'GPE'     : 'Location',
-            'LANGUAGE': 'Language'
+            'LANGUAGE': 'Language',
+            'DATE'    : 'Date'
         }
 
         return label_map.get(label)

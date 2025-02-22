@@ -1,10 +1,11 @@
 import unittest
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 class E2ETests(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Firefox(executable_path=r'/Applications/geckodriver')
+        self.driver = webdriver.Firefox()
         self.driver.get('http://localhost:5000')
 
     def tearDown(self):
@@ -34,5 +35,7 @@ class E2ETests(unittest.TestCase):
         self.assertIsNotNone(table)
 
     def _find(self, val):
-        return self.driver.find_element_by_css_selector(f'[data-test-id="{val}"]')
+        attribute_of_interest = f"[data-test-id='{val}']"
+        input_element = self.driver.find_element(By.CSS_SELECTOR, attribute_of_interest)
+        return input_element
 
